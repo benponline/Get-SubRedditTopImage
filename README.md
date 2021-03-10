@@ -1,6 +1,6 @@
 # Get-RedditWallpaper
  
-Gets the top rated image from www.reddit.com/r/wallpaper for the day.
+Gets the top rated image from a sub Reddit, wallpapers by default.
 
 Saves image as jpg.
 
