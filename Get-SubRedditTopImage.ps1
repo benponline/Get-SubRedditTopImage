@@ -10,11 +10,12 @@ $subredditTopPage = Invoke-WebRequest -Uri $subredditTopUri
 #Write-Verbose ($subredditTopPage.headers)
 
 # This line extracts the links out of the web request to the subreddit top page. The first link that contains "/comments/" in the URI is tipically the URI that points to the post.
+#$postWebLink = $subredditTopPage.links | Where-Object -Property href -Match "http://old.reddit.com/r/$SubReddit/comments/" | Select-Object -First 1
 $postWebLink = $subredditTopPage.links | Where-Object -Property href -Match "/comments/" | Select-Object -First 1
 
 $dateStamp =  Get-Date -UFormat %Y-%m-%d 
 
-#Write-Verbose ("Post URI: " + $postWebLink.href)
+Write-Verbose ("Post URI: " + $postWebLink.href)
 
 $postWebPage = Invoke-WebRequest -Uri ($postWebLink.href)
 
