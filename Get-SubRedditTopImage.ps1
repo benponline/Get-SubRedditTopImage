@@ -2,7 +2,7 @@
 param (
     [string]$SubReddit = "wallpapers",
     [string]$Path = "."   
-)
+) 
 
 $subredditTopUri = "www.reddit.com/r/$SubReddit/top/"
 $subredditTopPage = Invoke-WebRequest -Uri $subredditTopUri
