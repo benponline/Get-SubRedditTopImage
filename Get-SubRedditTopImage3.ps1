@@ -21,11 +21,11 @@ $postWebPage = Invoke-WebRequest -Uri ($postWebLink.href)
 
 # This line extracts the links out of the web request to the post page. This URI that contains the link to the image contains "i.redd.it".
 $postImageLink = $postWebPage.links | Where-Object -Property href -match "i.redd.it" | Select-Object -First 1
-$postImageLink
+#$postImageLink
 
 if($postImageLink.Count -lt 1){
     $postImageLink = $postWebPage.links | Where-Object -Property href -match "i.imgur.com" | Select-Object -First 1
-    $postImageLink
+    #$postImageLink
 }
 
 Write-Verbose ("Image URI: " + $postImageLink.href)
