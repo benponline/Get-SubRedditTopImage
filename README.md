@@ -1,8 +1,8 @@
-# Get-RedditWallpaper
- 
-Gets the top rated image from a sub Reddit, wallpapers by default.
+# Get-SubRedditTopImage
 
-Saves image as jpg.
+Gets the first image from a subreddit's top posts page. The wallpapers subreddit is the default, but can be changed by passing in a different one.
+
+Saves image as jpg. If the subreddit's top page does not have many images the script might fail. This script is meant to be used on subreddits that focus on posts with images. 
 
 Only compatable with PowerShell Core.
 
