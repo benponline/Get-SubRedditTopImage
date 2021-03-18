@@ -12,8 +12,7 @@ Only compatable with PowerShell Core.
 
 ## How to use
 1. Download the Get-SubRedditTopImage.ps1 file.
-2. Open PowerShell and run the following command: 
-`Set-ExecutionPolicy -ExecutionPolicy RemoteSigned`
+2. Open PowerShell and run the following command: `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned`
 3. This will allow PowerShell to run the script.
 4. Navigate to the directory where Get-SubRedditTopImage.ps1 is located. You can use `Set-Location` for this.
 5. Use the command `.\Get-SubRedditTopImage.ps1` to run the script. 
