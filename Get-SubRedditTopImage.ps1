@@ -1,7 +1,7 @@
 [CmdletBinding()]
 param (
     [string]$SubReddit = "wallpapers",
-    [string]$Path = "."   
+    [string]$Path = "."
 ) 
 
 $dateStamp =  Get-Date -UFormat %Y-%m-%d
@@ -36,7 +36,7 @@ if($postImageLink.Count -lt 1){
 Write-Verbose ("Requesting image from " + $postImageLink.href)
 
 if($null -eq $postImageLink.href){
-    Write-Host "Unable to get a top image post from the $SubReddit sub Reddit."
+    Write-Host "Unable to get a top image post from the $SubReddit subreddit."
 }else{
     # Download the image to the directory the script is in or the directory given by the user.
     Invoke-WebRequest -Uri ($postImageLink.href) -OutFile "$Path\$dateStamp $SubReddit.jpg"
