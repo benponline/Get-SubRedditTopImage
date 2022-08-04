@@ -16,7 +16,7 @@ $subredditTopPage = Invoke-WebRequest -Uri $subredditTopUri
 $postWebLink = $subredditTopPage.links | Where-Object -Property href -NotMatch "discord" | Where-Object -Property href -Match "/comments/" | Select-Object -First 1
 
 if($null -eq $postWebLink.href){
-    Write-Host "Unable to get image from the $SubReddit subreddit"
+    Write-Host "Unable to get top image post from the $SubReddit subreddit"
     return
 } 
 
